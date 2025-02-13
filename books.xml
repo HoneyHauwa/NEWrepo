@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore>
+    <book category="fiction">
+    <title lang="igbo, ibibio, berom, etsako"> Things fall apart</title>
+    <author>chinuanAchebe </author>
+    <year>1965</year>
+    <price>2000<price/>
+    <book category="fiction">
+    <title lang="igbo, ibibio, berom, etsako"> Half of a yellow sun</title>
+    <author>chiamnda Adiche</author>
+    <year>2001</year>
+    <price>8000<price/>
+    <book category="fiction">
+    <title lang="itshekiri, ijaw, oron">the Gods are not to blame</title>
+    <author>ola rotimi</author>
+    <year>1965</year>
+    <price>5000<price/>
+</bookstore>
