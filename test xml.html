@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML view</title>
+</head>
+<body>
+    <h1>Query xml with xpath</h1>
+    <p id="demo"></p>
+
+    <script>
+        var xhttp = new XMLHRequest();
+        xhttp.onreadystatechange = function() {
+            if(this.readystart == 4 && this.status == 200){
+                showResult(xhttp.responsexml);
+            }
+        };
+
+        xhttp.open("Get","books.xml", true);
+        xhttp.send();
+
+
+        function showResult(xml){
+            var txt = "";
+            path = "/bookstore/book[1]/title"
+            if (xml.evaluate) {
+                var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+                var result = nodes.iterateNetwork();
+                while (result) {
+                    txt +- result.childNodes[0].nodeValue + "<br>"
+                    result = nodes.iterateNext;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
